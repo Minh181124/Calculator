@@ -1,17 +1,27 @@
 ﻿using Maytinh.Models;
 using Maytinh.Service;
-namespace Maytinh
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Maytinh.View
 {
-    public partial class Form1 : Form
+    public partial class StandardV : Form
     {
-        public Form1()
+        public StandardV()
         {
             InitializeComponent();
         }
         int flag = 0;
         bool enter_value = false;
         MayTinhM data = new MayTinhM();
-        MayTinhS s= new MayTinhS();
+        MayTinhS s = new MayTinhS();
         //su kien click number
         private void btn_click(object sender, EventArgs e)
         {
@@ -78,9 +88,9 @@ namespace Maytinh
                 else
                 {
                     txt_Display.Text = s.Tinh(data.n1, data.n2, data.operation);
-                    if(data.n2<0)
+                    if (data.n2 < 0)
                         txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + "(" + System.Convert.ToString(data.n2) + ")" + " = ";
-                    else if (data.n1<0)
+                    else if (data.n1 < 0)
                         txt_show.Text = "(" + System.Convert.ToString(data.n1) + ")" + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
                     else
                         txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
@@ -115,12 +125,12 @@ namespace Maytinh
         //su kien click C
         private void btn_C_Click(object sender, EventArgs e)
         {
-           Reset();
+            Reset();
         }
         //su kien click CE
         private void btn_CE_Click(object sender, EventArgs e)
         {
-           Reset();
+            Reset();
         }
         //su kien click %
         private void btn_phantram_Click(object sender, EventArgs e)
@@ -130,7 +140,7 @@ namespace Maytinh
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
                 txt_Display.Text = (data.n1 / 100).ToString();
-                txt_show.Text = System.Convert.ToString(data.n1) +num.Text+" = ";
+                txt_show.Text = System.Convert.ToString(data.n1) + num.Text + " = ";
                 flag = 1;
             }
             catch (Exception ex) { data.n1 = 0; }
@@ -141,7 +151,7 @@ namespace Maytinh
             try
             {
                 data.n1 = Double.Parse(txt_Display.Text);
-                if (data.n1 == 0 )
+                if (data.n1 == 0)
                 {
                     MessageBox.Show("Không thể chia cho 0");
                     txt_Display.Text = "0";
@@ -163,7 +173,7 @@ namespace Maytinh
             {
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = s.luyThua(data.n1, 2);
+                txt_Display.Text = s.luyThua(data.n1, 2).ToString();
                 txt_show.Text = System.Convert.ToString(data.n1) + "^" + "2" + " = ";
                 flag = 1;
             }
@@ -176,15 +186,22 @@ namespace Maytinh
             {
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = s.canBac(data.n1, 2);
-                txt_show.Text = "√"+System.Convert.ToString(data.n1) + " = ";
+                txt_Display.Text = s.canBac(data.n1, 2).ToString();
+                txt_show.Text = "√" + System.Convert.ToString(data.n1) + " = ";
                 flag = 1;
             }
             catch (Exception ex) { data.n1 = 0; }
         }
-        private void generalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
+        private void scientificToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try { 
+                View.ScientificV scientificfrm = new View.ScientificV();
+                this.Hide();
+                scientificfrm.ShowDialog();
+                this.Show();
+                Application.Exit();
+            } catch (Exception ex) { }
         }
     }
 }

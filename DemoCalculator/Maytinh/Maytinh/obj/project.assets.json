@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\code\\GeneralComputer\\Maytinh\\Maytinh\\Maytinh.csproj",
+      "projectUniqueName": "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj",
       "projectName": "Maytinh",
-      "projectPath": "D:\\code\\GeneralComputer\\Maytinh\\Maytinh\\Maytinh.csproj",
+      "projectPath": "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj",
       "packagesPath": "C:\\Users\\lequa\\.nuget\\packages\\",
-      "outputPath": "D:\\code\\GeneralComputer\\Maytinh\\Maytinh\\obj\\",
+      "outputPath": "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lequa\\AppData\\Roaming\\NuGet\\NuGet.Config",

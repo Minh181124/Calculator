@@ -1,14 +1,14 @@
-﻿namespace Maytinh
+﻿namespace Maytinh.View
 {
-    partial class Form1
+    partial class StandardV
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StandardV));
             btn_1 = new Button();
             btn_2 = new Button();
             btn_3 = new Button();
@@ -55,8 +56,8 @@
             btn_CE = new Button();
             btn_motPhan = new Button();
             menuStrip1 = new MenuStrip();
-            advancedComputerToolStripMenuItem = new ToolStripMenuItem();
-            generalToolStripMenuItem = new ToolStripMenuItem();
+            ToolStripMenuItem = new ToolStripMenuItem();
+            scientificToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -255,7 +256,7 @@
             // btn_chia
             // 
             btn_chia.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_chia.Location = new Point(260, 211);
+            btn_chia.Location = new Point(260, 210);
             btn_chia.Margin = new Padding(4, 3, 4, 3);
             btn_chia.Name = "btn_chia";
             btn_chia.Size = new Size(70, 44);
@@ -279,7 +280,7 @@
             // btn_canbac2
             // 
             btn_canbac2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_canbac2.Location = new Point(180, 213);
+            btn_canbac2.Location = new Point(181, 210);
             btn_canbac2.Margin = new Padding(4, 3, 4, 3);
             btn_canbac2.Name = "btn_canbac2";
             btn_canbac2.Size = new Size(70, 44);
@@ -303,10 +304,11 @@
             // txt_show
             // 
             txt_show.AllowDrop = true;
+            txt_show.BackColor = SystemColors.Control;
             txt_show.BorderStyle = BorderStyle.None;
             txt_show.Enabled = false;
-            txt_show.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txt_show.Location = new Point(16, 41);
+            txt_show.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_show.Location = new Point(16, 40);
             txt_show.Margin = new Padding(4, 3, 4, 3);
             txt_show.Multiline = true;
             txt_show.Name = "txt_show";
@@ -320,7 +322,7 @@
             txt_Display.BorderStyle = BorderStyle.None;
             txt_Display.Font = new Font("Microsoft Sans Serif", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_Display.HideSelection = false;
-            txt_Display.Location = new Point(16, 90);
+            txt_Display.Location = new Point(16, 89);
             txt_Display.Margin = new Padding(4, 3, 4, 3);
             txt_Display.Multiline = true;
             txt_Display.Name = "txt_Display";
@@ -329,7 +331,6 @@
             txt_Display.TabIndex = 21;
             txt_Display.Text = "0";
             txt_Display.TextAlign = HorizontalAlignment.Right;
-            txt_Display.TextChanged += this.txt_Display_TextChanged;
             // 
             // btn_backspace
             // 
@@ -382,27 +383,32 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { advancedComputerToolStripMenuItem, generalToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { ToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(359, 24);
+            menuStrip1.Size = new Size(359, 31);
             menuStrip1.TabIndex = 26;
             menuStrip1.Text = "menuStrip1";
             // 
-            // advancedComputerToolStripMenuItem
+            // ToolStripMenuItem
             // 
-            advancedComputerToolStripMenuItem.Name = "advancedComputerToolStripMenuItem";
-            advancedComputerToolStripMenuItem.Size = new Size(66, 20);
-            advancedComputerToolStripMenuItem.Text = "Standard";
+            ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { scientificToolStripMenuItem });
+            ToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ToolStripMenuItem.Image = (Image)resources.GetObject("ToolStripMenuItem.Image");
+            ToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            ToolStripMenuItem.Name = "ToolStripMenuItem";
+            ToolStripMenuItem.Size = new Size(35, 27);
             // 
-            // generalToolStripMenuItem
+            // scientificToolStripMenuItem
             // 
-            generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            generalToolStripMenuItem.Size = new Size(67, 20);
-            generalToolStripMenuItem.Text = "Scientific";
-            generalToolStripMenuItem.Click += generalToolStripMenuItem_Click;
+            scientificToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            scientificToolStripMenuItem.Image = (Image)resources.GetObject("scientificToolStripMenuItem.Image");
+            scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
+            scientificToolStripMenuItem.Size = new Size(137, 22);
+            scientificToolStripMenuItem.Text = "Scientific";
+            scientificToolStripMenuItem.Click += scientificToolStripMenuItem_Click;
             // 
-            // Form1
+            // StandardV
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -434,10 +440,9 @@
             Controls.Add(btn_2);
             Controls.Add(btn_1);
             Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Form1";
-            Text = "Calculator";
+            Name = "StandardV";
+            Text = "Standard ";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -473,7 +478,7 @@
         private System.Windows.Forms.Button btn_CE;
         private System.Windows.Forms.Button btn_motPhan;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem advancedComputerToolStripMenuItem;
-        private ToolStripMenuItem generalToolStripMenuItem;
+        private ToolStripMenuItem ToolStripMenuItem;
+        private ToolStripMenuItem scientificToolStripMenuItem;
     }
 }
