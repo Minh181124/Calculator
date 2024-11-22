@@ -21,12 +21,5 @@ namespace Maytinh.Models
             this.n3 = 0;
             this.operation = string.Empty;
         }
-        public double Evaluate(string expression) 
-        { 
-            DataTable table = new DataTable(); 
-            table.Columns.Add("expression", typeof(string), expression); 
-            DataRow row = table.NewRow(); table.Rows.Add(row); 
-            return double.Parse((string)row["expression"]); 
-        }
     }
 }

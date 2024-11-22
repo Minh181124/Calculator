@@ -67,8 +67,8 @@
             btn_ln = new Button();
             btn_log = new Button();
             btn_triTuyetDoi = new Button();
-            btn_ngoacDong = new Button();
-            btn_ngoacMo = new Button();
+            btn_pi = new Button();
+            btn_e = new Button();
             btn_exp = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -526,29 +526,29 @@
             btn_triTuyetDoi.UseVisualStyleBackColor = true;
             btn_triTuyetDoi.Click += btn_triTuyetDoi_Click;
             // 
-            // btn_ngoacDong
+            // btn_pi
             // 
-            btn_ngoacDong.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_ngoacDong.Location = new Point(98, 165);
-            btn_ngoacDong.Margin = new Padding(4, 3, 4, 3);
-            btn_ngoacDong.Name = "btn_ngoacDong";
-            btn_ngoacDong.Size = new Size(70, 44);
-            btn_ngoacDong.TabIndex = 35;
-            btn_ngoacDong.Text = ")";
-            btn_ngoacDong.UseVisualStyleBackColor = true;
-            btn_ngoacDong.Click += ngoacDong;
+            btn_pi.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_pi.Image = Properties.Resources.icons8_pi_26;
+            btn_pi.Location = new Point(98, 165);
+            btn_pi.Margin = new Padding(4, 3, 4, 3);
+            btn_pi.Name = "btn_pi";
+            btn_pi.Size = new Size(70, 44);
+            btn_pi.TabIndex = 35;
+            btn_pi.UseVisualStyleBackColor = true;
+            btn_pi.Click += this.btn_pi_Click;
             // 
-            // btn_ngoacMo
+            // btn_e
             // 
-            btn_ngoacMo.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_ngoacMo.Location = new Point(20, 165);
-            btn_ngoacMo.Margin = new Padding(4, 3, 4, 3);
-            btn_ngoacMo.Name = "btn_ngoacMo";
-            btn_ngoacMo.Size = new Size(70, 44);
-            btn_ngoacMo.TabIndex = 36;
-            btn_ngoacMo.Text = "(";
-            btn_ngoacMo.UseVisualStyleBackColor = true;
-            btn_ngoacMo.Click += ngoacMo;
+            btn_e.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_e.Location = new Point(20, 165);
+            btn_e.Margin = new Padding(4, 3, 4, 3);
+            btn_e.Name = "btn_e";
+            btn_e.Size = new Size(70, 44);
+            btn_e.TabIndex = 36;
+            btn_e.Text = "e";
+            btn_e.UseVisualStyleBackColor = true;
+            btn_e.Click += this.btn_e_Click;
             // 
             // btn_exp
             // 
@@ -568,8 +568,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(419, 529);
             Controls.Add(btn_exp);
-            Controls.Add(btn_ngoacMo);
-            Controls.Add(btn_ngoacDong);
+            Controls.Add(btn_e);
+            Controls.Add(btn_pi);
             Controls.Add(btn_triTuyetDoi);
             Controls.Add(btn_log);
             Controls.Add(btn_ln);
@@ -656,9 +656,9 @@
         private Button btn_ln;
         private Button btn_log;
         private Button btn_triTuyetDoi;
-        private Button btn_ngoacDong;
-        private Button btn_ngoacMo;
+        private Button btn_pi;
         private Button btn_exp;
         private ToolStripMenuItem toolStripMenuItem1;
+        private Button btn_e;
     }
 }

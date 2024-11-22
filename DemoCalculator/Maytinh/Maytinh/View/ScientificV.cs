@@ -84,7 +84,7 @@ namespace Maytinh.View
                     {
                         data.n1 = Double.Parse(txt_Display.Text);
                         txt_Display.Text = "";
-                        txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
+                        txt_show.Text += System.Convert.ToString(data.n1) + " " + data.operation;
                         enter_value = false;
                     }
                 }
@@ -95,11 +95,11 @@ namespace Maytinh.View
         private void xuat()
         {
             if (data.n2 < 0)
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + "(" + System.Convert.ToString(data.n2) + ")" + " = ";
+                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + "(" + System.Convert.ToString(data.n2) + ")";
             else if (data.n1 < 0)
-                txt_show.Text = "(" + System.Convert.ToString(data.n1) + ")" + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
+                txt_show.Text = "(" + System.Convert.ToString(data.n1) + ")" + " " + data.operation + " " + System.Convert.ToString(data.n2);
             else
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
+                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + System.Convert.ToString(data.n2);
             enter_value = true;
         }
         //sự kiện =
@@ -236,7 +236,7 @@ namespace Maytinh.View
                     Pheptinh lt2 = new luyThua();
                     data.n1 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = lt2.tinhtoan(data.n1, 2).ToString();
-                    txt_show.Text = System.Convert.ToString(data.n1) + "^" + "2" + " = ";
+                    txt_show.Text = System.Convert.ToString(data.n1) + "^" + "2";
                     enter_value = true;
                 }
                 else
@@ -271,7 +271,7 @@ namespace Maytinh.View
                     Pheptinh cb2 = new canBac();
                     data.n2 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = cb2.tinhtoan(data.n2, 2).ToString();
-                    txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "√" + System.Convert.ToString(data.n2) + " = ";
+                    txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "√" + System.Convert.ToString(data.n2);
                     enter_value = true;
                 }
             }
@@ -308,22 +308,11 @@ namespace Maytinh.View
         {
             try
             {
-                if (data.n1 == 0)
-                {
-                    Button num = (Button)sender;
-                    data.operation = "yroot";
-                    data.n1 = Double.Parse(txt_Display.Text);
-                    txt_Display.Text = "";
-                    txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
-                }
-                else
-                {
-                    Button num = (Button)sender;
-                    data.operation = "yroot";
-                    data.n3 = Double.Parse(txt_Display.Text);
-                    txt_Display.Text = "";
-                    txt_show.Text = data.n1 + data.operation + System.Convert.ToString(data.n3) + " " + data.operation;
-                }
+                Button num = (Button)sender;
+                data.operation = "yroot";
+                data.n1 = Double.Parse(txt_Display.Text);
+                txt_Display.Text = "";
+                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
             }
             catch (Exception ex) { data.n1 = 0; }
         }
@@ -358,9 +347,10 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh Abs = new ABS();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = Math.Abs(data.n1).ToString();
+                txt_Display.Text = Abs.tinhtoan(data.n1,data.n2).ToString();
                 txt_show.Text = "|" + System.Convert.ToString(data.n1) + "|" + " = ";
                 enter_value = true;
             }
@@ -371,9 +361,10 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh giaithua= new giaiThua();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = s.giaithua(data.n1).ToString();
+                txt_Display.Text = giaithua.tinhtoan(data.n1,data.n2).ToString();
                 txt_show.Text = System.Convert.ToString(data.n1) + "!" + " = ";
                 enter_value = true;
             }
@@ -384,6 +375,7 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh log = new Log();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
                 if (data.n1 <= 0)
@@ -394,7 +386,7 @@ namespace Maytinh.View
                 }
                 else
                 {
-                    txt_Display.Text = Math.Log10(data.n1).ToString();
+                    txt_Display.Text = log.tinhtoan(data.n1,data.n2).ToString();
                     txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                     enter_value = true;
                 }
@@ -406,6 +398,7 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh Ln= new LN();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
                 if (data.n1 <= 0)
@@ -416,7 +409,7 @@ namespace Maytinh.View
                 }
                 else
                 {
-                    txt_Display.Text = Math.Log(data.n1).ToString();
+                    txt_Display.Text = Ln.tinhtoan(data.n1,data.n2).ToString();
                     txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                     enter_value = true;
                 }
@@ -428,9 +421,10 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh Exp= new EXP();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = Math.Exp(data.n1).ToString();
+                txt_Display.Text = Exp.tinhtoan(data.n1,data.n2).ToString();
                 txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                 enter_value = true;
             }
@@ -451,31 +445,16 @@ namespace Maytinh.View
             }
             catch (Exception ex) { }
         }
-
-        private void ngoacMo(object sender, EventArgs e)
+        private void btn_e_Click(object sender, EventArgs e)
         {
-            if ((txt_Display.Text == "0") || (enter_value))
-            {
-                txt_Display.Text = "";
-                txt_show.Text = "";
-            }
-            enter_value = false;
-            Button num = (Button)sender;
-            txt_Display.Text = txt_Display.Text + num.Text;
+            Pheptinh E = new E();
+            txt_Display.Text=E.tinhtoan(data.n1, data.n2).ToString();
         }
 
-        private void ngoacDong(object sender, EventArgs e)
+        private void btn_pi_Click(object sender, EventArgs e)
         {
-            if ((txt_Display.Text == "0") || (enter_value))
-            {
-                txt_Display.Text = "";
-                txt_show.Text = "";
-            }
-            enter_value = false;
-            Button num = (Button)sender;
-            txt_Display.Text = txt_Display.Text + num.Text;
+            Pheptinh Pi = new PI();
+            txt_Display.Text = Pi.tinhtoan(data.n1, data.n2).ToString();
         }
-
-
     }
 }
