@@ -9,18 +9,22 @@ namespace Maytinh.Service
 {
     internal class LichSuMayTinhS
     {
-        private List<LichSuMayTinhM> history; 
-        public LichSuMayTinhS() 
-        { 
-            history = new List<LichSuMayTinhM>(); 
+        private List<LichSuMayTinhM> history { get; set; }
+        public LichSuMayTinhS()
+        {
+            this.history = new List<LichSuMayTinhM>();
         }
-        public List<LichSuMayTinhM> GetHistory() 
+        public List<LichSuMayTinhM> GetHistory()
         {
             return history;
         }
         public void AddToHistory(LichSuMayTinhM ls)
         {
-            history.Add(ls);
+            this.history.Add(ls);
+        }
+        public void Xoads()
+        {
+            this.history.Clear();
         }
     }
 }

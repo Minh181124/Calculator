@@ -41,28 +41,13 @@ namespace Maytinh.Service
                     ketqua = yroot.tinhtoan(n1, n2);
                     break;
                 case "^":
-                    ketqua = luyThua(n1, n2);
+                    Pheptinh luythua = new luyThua();
+                    ketqua = luythua.tinhtoan(n1, n2);
                     break;
                 default:
                     break;
             }
             return ketqua.ToString();
-        }
-        public double luyThua(double n1,double m)
-        {
-            double ketqua=Math.Pow(n1,m);
-            return ketqua;
-        }
-        public double giaithua(double n1)
-        {
-            double ketqua = 1;
-            int i = 1;
-            while (i <= n1)
-            {
-                ketqua *= i;
-                i++;
-            }
-            return ketqua;
         }
     }
 }

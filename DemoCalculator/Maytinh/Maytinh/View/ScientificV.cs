@@ -18,10 +18,15 @@ namespace Maytinh.View
         public ScientificV()
         {
             InitializeComponent();
+            Sender = new SendMessage(GetMessage);
+            Child.Senderback += GetMessage;
         }
         bool enter_value = false;
         MayTinhM data = new MayTinhM();
         MayTinhS s = new MayTinhS();
+        LichSu Child = new LichSu();
+        public delegate void SendMessage(double so1, double so2, double ketqua, string dau);
+        public SendMessage Sender;
         //sự kiện click number
         private void btn_click(object sender, EventArgs e)
         {
@@ -83,7 +88,7 @@ namespace Maytinh.View
                     {
                         data.n1 = Double.Parse(txt_Display.Text);
                         txt_Display.Text = "";
-                        txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
+                        txt_show.Text += System.Convert.ToString(data.n1) + " " + data.operation;
                         enter_value = false;
                     }
                 }
@@ -91,14 +96,14 @@ namespace Maytinh.View
             catch (Exception ex) { }
         }
         //Hàm xuất vào phép tính
-        private void xuat()
+        private void xuat(double n1, double n2, string operation)
         {
-            if (data.n2 < 0)
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + "(" + System.Convert.ToString(data.n2) + ")" + " = ";
-            else if (data.n1 < 0)
-                txt_show.Text = "(" + System.Convert.ToString(data.n1) + ")" + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
+            if (n2 < 0)
+                txt_show.Text = System.Convert.ToString(n1) + " " + operation + " " + "(" + System.Convert.ToString(n2) + ")" + " = ";
+            else if (n1 < 0)
+                txt_show.Text = "(" + System.Convert.ToString(n1) + ")" + " " + operation + " " + System.Convert.ToString(n2) + " = ";
             else
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
+                txt_show.Text = System.Convert.ToString(n1) + " " + operation + " " + System.Convert.ToString(n2) + " = ";
             enter_value = true;
         }
         //sự kiện =
@@ -107,6 +112,8 @@ namespace Maytinh.View
             try
             {
                 bang();
+                double ketqua = double.Parse(txt_Display.Text);
+                Child.Sender(data.n1, data.n2, ketqua, data.operation); //Gọi delegate
                 data.operation = string.Empty;
             }
             catch (Exception ex) { MessageBox.Show("Hãy xóa đi và nhập lại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -132,16 +139,16 @@ namespace Maytinh.View
                     else
                     {
                         txt_Display.Text = s.Tinh(data.n1, data.n2, data.operation);
-                        xuat();
+                        xuat(data.n1, data.n2, data.operation);
                     }
                 }
                 else
                 {
                     txt_Display.Text = s.Tinh(data.n1, data.n2, data.operation);
-                    xuat();
+                    xuat(data.n1, data.n2, data.operation);
                 }
             }
-            catch (Exception ex) {  }
+            catch (Exception ex) { }
         }
         //sự kiện ⌫
         private void btn_backspace_Click(object sender, EventArgs e)
@@ -227,13 +234,13 @@ namespace Maytinh.View
         {
             try
             {
-                if (data.n1 == 0)
+                if (data.operation==string.Empty)
                 {
                     Button num = (Button)sender;
                     Pheptinh lt2 = new luyThua();
                     data.n1 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = lt2.tinhtoan(data.n1, 2).ToString();
-                    txt_show.Text = System.Convert.ToString(data.n1) + "^" + "2" + " = ";
+                    txt_show.Text = System.Convert.ToString(data.n1) + "^" + "2";
                     enter_value = true;
                 }
                 else
@@ -253,7 +260,7 @@ namespace Maytinh.View
         {
             try
             {
-                if (data.n1==0)
+                if (data.operation == string.Empty)
                 {
                     Button num = (Button)sender;
                     Pheptinh cb2 = new canBac();
@@ -268,7 +275,7 @@ namespace Maytinh.View
                     Pheptinh cb2 = new canBac();
                     data.n2 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = cb2.tinhtoan(data.n2, 2).ToString();
-                    txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "√" + System.Convert.ToString(data.n2) + " = ";
+                    txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "√" + System.Convert.ToString(data.n2);
                     enter_value = true;
                 }
             }
@@ -279,6 +286,10 @@ namespace Maytinh.View
         {
             try
             {
+                if (Child.Visible)
+                {
+                    Child.Close();
+                }
                 View.StandardV standardfrm = new View.StandardV();
                 this.Hide();
                 standardfrm.ShowDialog();
@@ -305,22 +316,11 @@ namespace Maytinh.View
         {
             try
             {
-                if (data.n1 == 0)
-                {
-                    Button num = (Button)sender;
-                    data.operation = "yroot";
-                    data.n1 = Double.Parse(txt_Display.Text);
-                    txt_Display.Text = "";
-                    txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
-                }
-                else
-                {
-                    Button num = (Button)sender;
-                    data.operation = "yroot";
-                    data.n3 = Double.Parse(txt_Display.Text);
-                    txt_Display.Text = "";
-                    txt_show.Text =data.n1+data.operation+ System.Convert.ToString(data.n3) + " " + data.operation;
-                }
+                Button num = (Button)sender;
+                data.operation = "yroot";
+                data.n1 = Double.Parse(txt_Display.Text);
+                txt_Display.Text = "";
+                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
             }
             catch (Exception ex) { data.n1 = 0; }
         }
@@ -355,9 +355,10 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh Abs = new ABS();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = Math.Abs(data.n1).ToString();
+                txt_Display.Text = Abs.tinhtoan(data.n1,data.n2).ToString();
                 txt_show.Text = "|" + System.Convert.ToString(data.n1) + "|" + " = ";
                 enter_value = true;
             }
@@ -368,9 +369,10 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh giaithua= new giaiThua();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = s.giaithua(data.n1).ToString();
+                txt_Display.Text = giaithua.tinhtoan(data.n1,data.n2).ToString();
                 txt_show.Text = System.Convert.ToString(data.n1) + "!" + " = ";
                 enter_value = true;
             }
@@ -381,6 +383,7 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh log = new Log();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
                 if (data.n1 <= 0)
@@ -391,7 +394,7 @@ namespace Maytinh.View
                 }
                 else
                 {
-                    txt_Display.Text = Math.Log10(data.n1).ToString();
+                    txt_Display.Text = log.tinhtoan(data.n1,data.n2).ToString();
                     txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                     enter_value = true;
                 }
@@ -403,6 +406,7 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh Ln= new LN();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
                 if (data.n1 <= 0)
@@ -413,7 +417,7 @@ namespace Maytinh.View
                 }
                 else
                 {
-                    txt_Display.Text = Math.Log(data.n1).ToString();
+                    txt_Display.Text = Ln.tinhtoan(data.n1,data.n2).ToString();
                     txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                     enter_value = true;
                 }
@@ -425,18 +429,45 @@ namespace Maytinh.View
         {
             try
             {
+                Pheptinh Exp= new EXP();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = Math.Exp(data.n1).ToString();
+                txt_Display.Text = Exp.tinhtoan(data.n1,data.n2).ToString();
                 txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                 enter_value = true;
             }
             catch (Exception ex) { data.n1 = 0; }
         }
-
-        private void btn_ngoacMo_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (Child.Visible)
+                {
+                    Child.Hide();
+                }
+                else
+                {
+                    Child.Show();
+                }
+            }
+            catch (Exception ex) { }
+        }
+        private void btn_e_Click(object sender, EventArgs e)
+        {
+            Pheptinh E = new E();
+            txt_Display.Text=E.tinhtoan(data.n1, data.n2).ToString();
+        }
 
+        private void btn_pi_Click(object sender, EventArgs e)
+        {
+            Pheptinh Pi = new PI();
+            txt_Display.Text = Pi.tinhtoan(data.n1, data.n2).ToString();
+        }
+        private void GetMessage(double so1, double so2, double ketqua, string dau)
+        {
+            txt_Display.Text = ketqua.ToString();
+            xuat(so1, so2, dau);
         }
     }
 }
