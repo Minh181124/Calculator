@@ -40,6 +40,7 @@
             lst_history.Name = "lst_history";
             lst_history.Size = new Size(425, 229);
             lst_history.TabIndex = 0;
+            lst_history.SelectedIndexChanged += lst_history_SelectedIndexChanged;
             // 
             // btn_clear
             // 
@@ -63,6 +64,7 @@
             MinimizeBox = false;
             Name = "LichSu";
             Text = "History";
+            Load += LichSu_Load;
             ResumeLayout(false);
         }
 
