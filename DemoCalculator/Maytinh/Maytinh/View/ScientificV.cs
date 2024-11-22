@@ -22,6 +22,7 @@ namespace Maytinh.View
         bool enter_value = false;
         MayTinhM data = new MayTinhM();
         MayTinhS s = new MayTinhS();
+        LichSu Child = new LichSu();
         //sự kiện click number
         private void btn_click(object sender, EventArgs e)
         {
@@ -107,6 +108,8 @@ namespace Maytinh.View
             try
             {
                 bang();
+                double ketqua = double.Parse(txt_Display.Text);
+                Child.Sender(data.n1, data.n2, ketqua, data.operation); //Gọi delegate
                 data.operation = string.Empty;
             }
             catch (Exception ex) { MessageBox.Show("Hãy xóa đi và nhập lại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -141,7 +144,7 @@ namespace Maytinh.View
                     xuat();
                 }
             }
-            catch (Exception ex) {  }
+            catch (Exception ex) { }
         }
         //sự kiện ⌫
         private void btn_backspace_Click(object sender, EventArgs e)
@@ -253,7 +256,7 @@ namespace Maytinh.View
         {
             try
             {
-                if (data.n1==0)
+                if (data.n1 == 0)
                 {
                     Button num = (Button)sender;
                     Pheptinh cb2 = new canBac();
@@ -319,7 +322,7 @@ namespace Maytinh.View
                     data.operation = "yroot";
                     data.n3 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = "";
-                    txt_show.Text =data.n1+data.operation+ System.Convert.ToString(data.n3) + " " + data.operation;
+                    txt_show.Text = data.n1 + data.operation + System.Convert.ToString(data.n3) + " " + data.operation;
                 }
             }
             catch (Exception ex) { data.n1 = 0; }
@@ -433,10 +436,46 @@ namespace Maytinh.View
             }
             catch (Exception ex) { data.n1 = 0; }
         }
-
-        private void btn_ngoacMo_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (Child.Visible)
+                {
+                    Child.Hide();
+                }
+                else
+                {
+                    Child.Show();
+                }
+            }
+            catch (Exception ex) { }
         }
+
+        private void ngoacMo(object sender, EventArgs e)
+        {
+            if ((txt_Display.Text == "0") || (enter_value))
+            {
+                txt_Display.Text = "";
+                txt_show.Text = "";
+            }
+            enter_value = false;
+            Button num = (Button)sender;
+            txt_Display.Text = txt_Display.Text + num.Text;
+        }
+
+        private void ngoacDong(object sender, EventArgs e)
+        {
+            if ((txt_Display.Text == "0") || (enter_value))
+            {
+                txt_Display.Text = "";
+                txt_show.Text = "";
+            }
+            enter_value = false;
+            Button num = (Button)sender;
+            txt_Display.Text = txt_Display.Text + num.Text;
+        }
+
+
     }
 }
