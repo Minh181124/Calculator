@@ -10,12 +10,14 @@ namespace Maytinh.Models
     {
         public double n1 { get; set; }
         public double n2 { get; set; }
+        public double n3 { get; set; }
         public string operation { get; set; }
 
         public MayTinhM() 
         {
             this.n1 = 0;
             this.n2 = 0;
+            this.n3 = 0;
             this.operation = string.Empty;
         }
     }

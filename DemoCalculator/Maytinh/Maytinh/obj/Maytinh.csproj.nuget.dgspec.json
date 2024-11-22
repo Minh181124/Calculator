@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj": {}
+    "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj": {}
   },
   "projects": {
-    "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj": {
+    "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj",
+        "projectUniqueName": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj",
         "projectName": "Maytinh",
-        "projectPath": "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj",
+        "projectPath": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Maytinh.csproj",
         "packagesPath": "C:\\Users\\lequa\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\obj\\",
+        "outputPath": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lequa\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -594,7 +594,10 @@
             Controls.Add(btn_1);
             Controls.Add(menuStrip1);
             Margin = new Padding(4, 3, 4, 3);
+            MaximumSize = new Size(435, 568);
+            MinimumSize = new Size(435, 568);
             Name = "ScientificV";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Scientific ";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

@@ -58,6 +58,7 @@
             menuStrip1 = new MenuStrip();
             ToolStripMenuItem = new ToolStripMenuItem();
             scientificToolStripMenuItem = new ToolStripMenuItem();
+            lichSuToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -383,10 +384,10 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { ToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { ToolStripMenuItem, lichSuToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(359, 31);
+            menuStrip1.Size = new Size(359, 32);
             menuStrip1.TabIndex = 26;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -397,7 +398,7 @@
             ToolStripMenuItem.Image = (Image)resources.GetObject("ToolStripMenuItem.Image");
             ToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             ToolStripMenuItem.Name = "ToolStripMenuItem";
-            ToolStripMenuItem.Size = new Size(35, 27);
+            ToolStripMenuItem.Size = new Size(35, 28);
             // 
             // scientificToolStripMenuItem
             // 
@@ -408,10 +409,23 @@
             scientificToolStripMenuItem.Text = "Scientific";
             scientificToolStripMenuItem.Click += scientificToolStripMenuItem_Click;
             // 
+            // lichSuToolStripMenuItem
+            // 
+            lichSuToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            lichSuToolStripMenuItem.Image = Properties.Resources.icons8_history_24;
+            lichSuToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            lichSuToolStripMenuItem.Name = "lichSuToolStripMenuItem";
+            lichSuToolStripMenuItem.RightToLeft = RightToLeft.Yes;
+            lichSuToolStripMenuItem.Size = new Size(36, 28);
+            lichSuToolStripMenuItem.TextAlign = ContentAlignment.MiddleRight;
+            lichSuToolStripMenuItem.TextDirection = ToolStripTextDirection.Horizontal;
+            lichSuToolStripMenuItem.Click += lichSuToolStripMenuItem_Click;
+            // 
             // StandardV
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(359, 472);
             Controls.Add(btn_backspace);
             Controls.Add(btn_phantram);
@@ -441,7 +455,10 @@
             Controls.Add(btn_1);
             Controls.Add(menuStrip1);
             Margin = new Padding(4, 3, 4, 3);
+            MaximumSize = new Size(375, 511);
+            MinimumSize = new Size(375, 511);
             Name = "StandardV";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Standard ";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -480,5 +497,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem ToolStripMenuItem;
         private ToolStripMenuItem scientificToolStripMenuItem;
+        private ToolStripMenuItem lichSuToolStripMenuItem;
     }
 }
