@@ -276,7 +276,7 @@ namespace Maytinh.View
             {
                 if (radio.Text == "DEC")
                 {
-                    ResetC();
+                    txt_show.Text = "";
                     pnl_HEX.Enabled = false;
                     pnl_OCT.Enabled = true;
                     btn_2.Enabled = true;
@@ -290,7 +290,7 @@ namespace Maytinh.View
                 }
                 if (radio.Text == "HEX")
                 {
-                    ResetC();
+                    txt_show.Text = "";
                     pnl_HEX.Enabled = true;
                     pnl_OCT.Enabled = true;
                     btn_2.Enabled = true;
@@ -304,7 +304,7 @@ namespace Maytinh.View
                 }
                 if (radio.Text == "BIN")
                 {
-                    ResetC();
+                    txt_show.Text = "";
                     pnl_HEX.Enabled = false;
                     pnl_OCT.Enabled = false;
                     btn_2.Enabled = false;
@@ -318,7 +318,7 @@ namespace Maytinh.View
                 }
                 if (radio.Text == "OCT")
                 {
-                    ResetC();
+                    txt_show.Text = "";
                     pnl_HEX.Enabled = false;
                     pnl_OCT.Enabled = false;
                     btn_2.Enabled = true;
