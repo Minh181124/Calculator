@@ -4,6 +4,9 @@
     <Compile Update="View\LichSu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\ProgammerV.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\ScientificV.cs">
       <SubType>Form</SubType>
     </Compile>

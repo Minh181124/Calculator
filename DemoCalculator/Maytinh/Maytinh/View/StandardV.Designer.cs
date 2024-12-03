@@ -58,6 +58,7 @@
             menuStrip1 = new MenuStrip();
             ToolStripMenuItem = new ToolStripMenuItem();
             scientificToolStripMenuItem = new ToolStripMenuItem();
+            progammerToolStripMenuItem = new ToolStripMenuItem();
             lichSuToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -393,7 +394,7 @@
             // 
             // ToolStripMenuItem
             // 
-            ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { scientificToolStripMenuItem });
+            ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { scientificToolStripMenuItem, progammerToolStripMenuItem });
             ToolStripMenuItem.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ToolStripMenuItem.Image = (Image)resources.GetObject("ToolStripMenuItem.Image");
             ToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
@@ -405,9 +406,18 @@
             scientificToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             scientificToolStripMenuItem.Image = (Image)resources.GetObject("scientificToolStripMenuItem.Image");
             scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
-            scientificToolStripMenuItem.Size = new Size(137, 22);
+            scientificToolStripMenuItem.Size = new Size(180, 22);
             scientificToolStripMenuItem.Text = "Scientific";
             scientificToolStripMenuItem.Click += scientificToolStripMenuItem_Click;
+            // 
+            // progammerToolStripMenuItem
+            // 
+            progammerToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            progammerToolStripMenuItem.Image = Properties.Resources.icons8_code_26;
+            progammerToolStripMenuItem.Name = "progammerToolStripMenuItem";
+            progammerToolStripMenuItem.Size = new Size(180, 22);
+            progammerToolStripMenuItem.Text = "Progammer";
+            progammerToolStripMenuItem.Click += progammerToolStripMenuItem_Click;
             // 
             // lichSuToolStripMenuItem
             // 
@@ -498,5 +508,6 @@
         private ToolStripMenuItem ToolStripMenuItem;
         private ToolStripMenuItem scientificToolStripMenuItem;
         private ToolStripMenuItem lichSuToolStripMenuItem;
+        private ToolStripMenuItem progammerToolStripMenuItem;
     }
 }

@@ -20,6 +20,8 @@ namespace Maytinh.View
         public StandardV()
         {
             InitializeComponent();
+            Sender = new SendMessage(GetMessage);
+            Child.Senderback += GetMessage;
         }
 
         bool enter_value = false;
@@ -27,6 +29,8 @@ namespace Maytinh.View
         MayTinhS s = new MayTinhS();
         LichSuMayTinhS dsls = new LichSuMayTinhS();
         LichSu Child = new LichSu();
+        public delegate void SendMessage(double so1, double so2, double ketqua, string dau);
+        public SendMessage Sender;
         //su kien click number
         private void btn_click(object sender, EventArgs e)
         {
@@ -57,6 +61,15 @@ namespace Maytinh.View
             }
             catch (Exception ex) { }
         }
+        static string GetLastWord(string input)
+        {
+            if (string.IsNullOrEmpty(input)) 
+            { 
+                return string.Empty; 
+            } // Tách chuỗi thành mảng các từ
+            string[] words = input.Split(' '); // Lấy từ cuối cùng
+            return words[words.Length - 1]; 
+        }
         //su kien click + - * /
         private void btn_operator_Click(object sender, EventArgs e)
         {
@@ -78,10 +91,10 @@ namespace Maytinh.View
                     data.operation = num.Text;
                     if (txt_Display.Text == "")
                     {
-                        string lastchar = txt_show.Text.Substring(txt_show.TextLength - 1, 1);
-                        if (lastchar != data.operation)
+                        string lastword = GetLastWord(txt_show.Text);
+                        if (lastword != data.operation)
                         {
-                            txt_show.Text = txt_show.Text.Replace(lastchar, data.operation);
+                            txt_show.Text = txt_show.Text.Replace(lastword, data.operation);
                         }
                     }
                     else
@@ -95,14 +108,14 @@ namespace Maytinh.View
             }
             catch (Exception ex) { }
         }
-        private void xuat()
+        private void xuat(double n1, double n2, string operation)
         {
-            if (data.n2 < 0)
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + "(" + System.Convert.ToString(data.n2) + ")" + " = ";
-            else if (data.n1 < 0)
-                txt_show.Text = "(" + System.Convert.ToString(data.n1) + ")" + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
+            if (n2 < 0)
+                txt_show.Text = System.Convert.ToString(n1) + " " + operation + " " + "(" + System.Convert.ToString(n2) + ")" + " = ";
+            else if (n1 < 0)
+                txt_show.Text = "(" + System.Convert.ToString(n1) + ")" + " " + operation + " " + System.Convert.ToString(n2) + " = ";
             else
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation + " " + System.Convert.ToString(data.n2) + " = ";
+                txt_show.Text = System.Convert.ToString(n1) + " " + operation + " " + System.Convert.ToString(n2) + " = ";
             enter_value = true;
         }
         private void bang()
@@ -126,13 +139,13 @@ namespace Maytinh.View
                     else
                     {
                         txt_Display.Text = s.Tinh(data.n1, data.n2, data.operation);
-                        xuat();
+                        xuat(data.n1, data.n2, data.operation);
                     }
                 }
                 else
                 {
                     txt_Display.Text = s.Tinh(data.n1, data.n2, data.operation);
-                    xuat();
+                    xuat(data.n1, data.n2, data.operation);
                 }
             }
             catch (Exception ex) { }
@@ -234,7 +247,7 @@ namespace Maytinh.View
         {
             try
             {
-                if (data.n1 == 0)
+                if (data.operation == string.Empty)
                 {
                     Button num = (Button)sender;
                     Pheptinh lt2 = new luyThua();
@@ -249,7 +262,7 @@ namespace Maytinh.View
                     Pheptinh lt2 = new luyThua();
                     data.n2 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = lt2.tinhtoan(data.n2, 2).ToString();
-                    txt_show.Text = data.n1 + data.operation + System.Convert.ToString(data.n2) + "^" + "2" + " = ";
+                    txt_show.Text = data.n1 + data.operation + System.Convert.ToString(data.n2) + "^" + "2";
                     enter_value = true;
                 }
             }
@@ -260,7 +273,7 @@ namespace Maytinh.View
         {
             try
             {
-                if (data.n1 == 0)
+                if (data.operation == string.Empty)
                 {
                     Button num = (Button)sender;
                     Pheptinh cb2 = new canBac();
@@ -275,7 +288,7 @@ namespace Maytinh.View
                     Pheptinh cb2 = new canBac();
                     data.n2 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = cb2.tinhtoan(data.n2, 2).ToString();
-                    txt_show.Text = data.n1 + data.operation + "√" + System.Convert.ToString(data.n2) + " = ";
+                    txt_show.Text = data.n1 + data.operation + "√" + System.Convert.ToString(data.n2);
                     enter_value = true;
                 }
             }
@@ -286,6 +299,10 @@ namespace Maytinh.View
         {
             try
             {
+                if (Child.Visible)
+                {
+                    Child.Close();
+                }
                 View.ScientificV scientificfrm = new View.ScientificV();
                 this.Hide();
                 scientificfrm.ShowDialog();
@@ -305,8 +322,31 @@ namespace Maytinh.View
                 }
                 else
                 {
+
                     Child.Show();
                 }
+            }
+            catch (Exception ex) { }
+        }
+        private void GetMessage(double so1, double so2, double ketqua, string dau)
+        {
+            txt_Display.Text = ketqua.ToString();
+            xuat(so1, so2, dau);
+        }
+
+        private void progammerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Child.Visible)
+                {
+                    Child.Close();
+                }
+                View.ProgammerV progammerfrm = new View.ProgammerV();
+                this.Hide();
+                progammerfrm.ShowDialog();
+                this.Show();
+                Application.Exit();
             }
             catch (Exception ex) { }
         }

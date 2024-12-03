@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Maytinh.Models;
 
@@ -10,7 +11,7 @@ namespace Maytinh.Service
 {
     internal class MayTinhS
     {
-        MayTinhM data= new MayTinhM();
+        MayTinhM data = new MayTinhM();
         public string Tinh(double n1, double n2, string operation)
         {
             double ketqua = 0;
@@ -18,7 +19,7 @@ namespace Maytinh.Service
             {
                 case "+":
                     Pheptinh cong = new phepCong();
-                    ketqua = cong.tinhtoan(n1,n2);
+                    ketqua = cong.tinhtoan(n1, n2);
                     break;
                 case "-":
                     Pheptinh tru = new phepTru();
@@ -41,28 +42,41 @@ namespace Maytinh.Service
                     ketqua = yroot.tinhtoan(n1, n2);
                     break;
                 case "^":
-                    ketqua = luyThua(n1, n2);
+                    Pheptinh luythua = new luyThua();
+                    ketqua = luythua.tinhtoan(n1, n2);
+                    break;
+                case "AND":
+                    Pheptinh and = new AND();
+                    ketqua = (double)and.tinhtoan(n1, n2); 
+                    break;
+                case "OR":
+                    Pheptinh or = new OR();
+                    ketqua = (double)or.tinhtoan(n1, n2);
+                    break;
+                case "XOR":
+                    Pheptinh xor = new XOR();
+                    ketqua = (double)xor.tinhtoan(n1, n2);
+                    break;
+                case "NAND":
+                    Pheptinh nand = new NAND();
+                    ketqua = (double)nand.tinhtoan(n1, n2);
+                    break;
+                case "NOR":
+                    Pheptinh nor = new NOR();
+                    ketqua = (double)nor.tinhtoan(n1, n2);
+                    break;
+                case "Rsh":
+                    Pheptinh rsh = new RSH();
+                    ketqua = (double)rsh.tinhtoan(n1, n2);
+                    break;
+                case "Lsh":
+                    Pheptinh lsh = new LSH();
+                    ketqua = (double)lsh.tinhtoan(n1, n2);
                     break;
                 default:
                     break;
             }
             return ketqua.ToString();
-        }
-        public double luyThua(double n1,double m)
-        {
-            double ketqua=Math.Pow(n1,m);
-            return ketqua;
-        }
-        public double giaithua(double n1)
-        {
-            double ketqua = 1;
-            int i = 1;
-            while (i <= n1)
-            {
-                ketqua *= i;
-                i++;
-            }
-            return ketqua;
         }
     }
 }

@@ -53,3 +53,4 @@ D:\code\DoAnTinHoc\Demo\DemoCalculator\Maytinh\Maytinh\obj\Debug\net8.0-windows\
 D:\code\DoAnTinHoc\Demo\DemoCalculator\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.genruntimeconfig.cache
 D:\code\DoAnTinHoc\Demo\DemoCalculator\Maytinh\Maytinh\obj\Debug\net8.0-windows\ref\Maytinh.dll
 D:\code\DoAnTinHoc\Demo\DemoCalculator\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.View.LichSu.resources
+D:\code\DoAnTinHoc\Demo\DemoCalculator\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.View.ProgammerV.resources

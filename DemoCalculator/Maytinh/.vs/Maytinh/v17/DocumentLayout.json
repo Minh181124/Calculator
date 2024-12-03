@@ -3,52 +3,68 @@
   "WorkspaceRootPath": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\standardv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\standardv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\service\\lichsumaytinhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\service\\lichsumaytinhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\maytinh\\view\\lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\models\\lichsumaytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\models\\lichsumaytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\service\\pheptinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\service\\pheptinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\models\\maytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\models\\maytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\service\\maytinhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\service\\maytinhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\progammerv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\progammerv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\progammerv.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\progammerv.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\maytinh\\view\\progammerv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\progammerv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\lichsu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\lichsu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\service\\pheptinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\service\\pheptinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\scientificv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\service\\progammers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\service\\progammers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\models\\maytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\models\\maytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\view\\standardv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\standardv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\maytinh\\view\\standardv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\standardv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\models\\lichsumaytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\models\\lichsumaytinhm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\maytinh\\view\\lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\view\\lichsu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|d:\\code\\doantinhoc\\demo\\democalculator\\maytinh\\maytinh\\service\\lichsumaytinhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2140D4F7-6228-44BC-BCA2-FD61C0523471}|Maytinh\\Maytinh.csproj|solutionrelative:maytinh\\service\\lichsumaytinhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +74,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "StandardV.cs",
               "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\StandardV.cs",
               "RelativeDocumentMoniker": "Maytinh\\View\\StandardV.cs",
               "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\StandardV.cs",
               "RelativeToolTip": "Maytinh\\View\\StandardV.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAAwDQBAAARAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAADwv0cAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T03:44:13.245Z",
               "IsPinned": true,
@@ -76,32 +92,128 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LichSu.cs",
-              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\LichSu.cs",
-              "RelativeDocumentMoniker": "Maytinh\\View\\LichSu.cs",
-              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\LichSu.cs",
-              "RelativeToolTip": "Maytinh\\View\\LichSu.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCQAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ProgammerS.cs",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\ProgammerS.cs",
+              "RelativeDocumentMoniker": "Maytinh\\Service\\ProgammerS.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\ProgammerS.cs",
+              "RelativeToolTip": "Maytinh\\Service\\ProgammerS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T14:21:00.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T10:06:23.035Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ProgammerV.cs",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ProgammerV.cs",
+              "RelativeDocumentMoniker": "Maytinh\\View\\ProgammerV.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ProgammerV.cs",
+              "RelativeToolTip": "Maytinh\\View\\ProgammerV.cs",
+              "ViewState": "AgIAAH0BAAAAAAAAAAAewIoBAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T06:07:29.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProgammerV.Designer.cs",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ProgammerV.Designer.cs",
+              "RelativeDocumentMoniker": "Maytinh\\View\\ProgammerV.Designer.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ProgammerV.Designer.cs",
+              "RelativeToolTip": "Maytinh\\View\\ProgammerV.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T06:01:26.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProgammerV.cs [Design]",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ProgammerV.cs",
+              "RelativeDocumentMoniker": "Maytinh\\View\\ProgammerV.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ProgammerV.cs [Design]",
+              "RelativeToolTip": "Maytinh\\View\\ProgammerV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T06:00:29.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LichSu.Designer.cs",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\LichSu.Designer.cs",
+              "RelativeDocumentMoniker": "Maytinh\\View\\LichSu.Designer.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\LichSu.Designer.cs",
+              "RelativeToolTip": "Maytinh\\View\\LichSu.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T16:16:00.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Pheptinh.cs",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\Pheptinh.cs",
+              "RelativeDocumentMoniker": "Maytinh\\Service\\Pheptinh.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\Pheptinh.cs",
+              "RelativeToolTip": "Maytinh\\Service\\Pheptinh.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAA6wKsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T03:55:55.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ScientificV.cs",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs",
+              "RelativeDocumentMoniker": "Maytinh\\View\\ScientificV.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs",
+              "RelativeToolTip": "Maytinh\\View\\ScientificV.cs",
+              "ViewState": "AgIAAEwBAAAAAAAAAADwv1gBAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T05:27:56.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ScientificV.cs [Design]",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs",
+              "RelativeDocumentMoniker": "Maytinh\\View\\ScientificV.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs [Design]",
+              "RelativeToolTip": "Maytinh\\View\\ScientificV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:44:21.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MayTinhS.cs",
+              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\MayTinhS.cs",
+              "RelativeDocumentMoniker": "Maytinh\\Service\\MayTinhS.cs",
+              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\MayTinhS.cs",
+              "RelativeToolTip": "Maytinh\\Service\\MayTinhS.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwE8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T03:41:45.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "LichSuMayTinhS.cs",
               "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\LichSuMayTinhS.cs",
               "RelativeDocumentMoniker": "Maytinh\\Service\\LichSuMayTinhS.cs",
               "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\LichSuMayTinhS.cs",
               "RelativeToolTip": "Maytinh\\Service\\LichSuMayTinhS.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAIAwwBUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:49:50.554Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "StandardV.cs [Design]",
               "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\StandardV.cs",
               "RelativeDocumentMoniker": "Maytinh\\View\\StandardV.cs",
@@ -112,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "LichSu.cs [Design]",
               "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\LichSu.cs",
               "RelativeDocumentMoniker": "Maytinh\\View\\LichSu.cs",
@@ -123,88 +235,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "LichSuMayTinhM.cs",
               "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Models\\LichSuMayTinhM.cs",
               "RelativeDocumentMoniker": "Maytinh\\Models\\LichSuMayTinhM.cs",
               "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Models\\LichSuMayTinhM.cs",
               "RelativeToolTip": "Maytinh\\Models\\LichSuMayTinhM.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T10:05:40.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ScientificV.cs",
-              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs",
-              "RelativeDocumentMoniker": "Maytinh\\View\\ScientificV.cs",
-              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs",
-              "RelativeToolTip": "Maytinh\\View\\ScientificV.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAkwG0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T05:27:56.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Pheptinh.cs",
-              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\Pheptinh.cs",
-              "RelativeDocumentMoniker": "Maytinh\\Service\\Pheptinh.cs",
-              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\Pheptinh.cs",
-              "RelativeToolTip": "Maytinh\\Service\\Pheptinh.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAkwDsAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T03:55:55.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MayTinhS.cs",
-              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\MayTinhS.cs",
-              "RelativeDocumentMoniker": "Maytinh\\Service\\MayTinhS.cs",
-              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Service\\MayTinhS.cs",
-              "RelativeToolTip": "Maytinh\\Service\\MayTinhS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T03:41:45.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "MayTinhM.cs",
               "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Models\\MayTinhM.cs",
               "RelativeDocumentMoniker": "Maytinh\\Models\\MayTinhM.cs",
               "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Models\\MayTinhM.cs",
               "RelativeToolTip": "Maytinh\\Models\\MayTinhM.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowBAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T03:40:41.703Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ScientificV.cs [Design]",
-              "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs",
-              "RelativeDocumentMoniker": "Maytinh\\View\\ScientificV.cs",
-              "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\View\\ScientificV.cs [Design]",
-              "RelativeToolTip": "Maytinh\\View\\ScientificV.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T16:53:22.835Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Program.cs",
               "RelativeDocumentMoniker": "Maytinh\\Program.cs",
               "ToolTip": "D:\\code\\DoAnTinHoc\\Demo\\DemoCalculator\\Maytinh\\Maytinh\\Program.cs",
               "RelativeToolTip": "Maytinh\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T15:06:48.25Z"
+              "WhenOpened": "2024-11-08T15:06:48.25Z",
+              "EditorCaption": ""
             }
           ]
         }
