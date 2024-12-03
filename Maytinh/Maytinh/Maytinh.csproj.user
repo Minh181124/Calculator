@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\code\DoAnTinHoc\Demo\DemoCalculator\Maytinh\Maytinh\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="View\LichSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\ProgammerV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\ScientificV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\StandardV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\TrigonometryV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
