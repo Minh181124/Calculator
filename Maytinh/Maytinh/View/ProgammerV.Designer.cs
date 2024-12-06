@@ -735,7 +735,8 @@
             Controls.Add(btn_1);
             Controls.Add(menuStrip1);
             Margin = new Padding(4, 3, 4, 3);
-            MinimumSize = new Size(375, 511);
+            MaximumSize = new Size(443, 642);
+            MinimumSize = new Size(443, 642);
             Name = "ProgammerV";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Progammer";
