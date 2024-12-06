@@ -63,6 +63,26 @@ namespace Maytinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_arrow_down_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-arrow-down-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_arrow_down_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-arrow-down-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_calculator_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-calculator-26", resourceCulture);

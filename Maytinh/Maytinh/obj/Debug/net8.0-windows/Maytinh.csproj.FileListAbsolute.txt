@@ -86,7 +86,6 @@ D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.View.Li
 D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.View.ProgammerV.resources
 D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.View.ScientificV.resources
 D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.View.StandardV.resources
-D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.View.TrigonometryV.resources
 D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.csproj.GenerateResource.cache
 D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.GeneratedMSBuildEditorConfig.editorconfig
 D:\code\DoAnTinHoc\Demo\Maytinh\Maytinh\obj\Debug\net8.0-windows\Maytinh.AssemblyInfoInputs.cache

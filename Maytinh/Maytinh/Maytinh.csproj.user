@@ -16,8 +16,5 @@
     <Compile Update="View\StandardV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\TrigonometryV.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

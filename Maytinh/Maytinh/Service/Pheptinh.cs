@@ -118,6 +118,62 @@ namespace Maytinh.Service
             return Math.Abs(n1);
         }
     }
+    public class Sin : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return Math.Sin(n1);
+        }
+    }
+    public class ASin : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return Math.Asin(n1);
+        }
+    }
+    public class Cos : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return Math.Cos(n1);
+        }
+    }
+    public class ACos : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return Math.Acos(n1);
+        }
+    }
+    public class Tan : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return Math.Tan(n1);
+        }
+    }
+    public class ATan : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return Math.Atan(n1);
+        }
+    }
+    public class Cot : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return 1/Math.Tan(n1);
+        }
+    }
+    public class ACot : Pheptinh
+    {
+        public override double tinhtoan(double n1, double n2)
+        {
+            return Math.PI / 2 - Math.Atan(n1);
+        }
+    }
     public class AND : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)

@@ -245,25 +245,25 @@ namespace Maytinh.View
             {
                 if (data.operation == string.Empty)
 
-                if (data.operation==string.Empty)
+                    if (data.operation == string.Empty)
 
-                {
-                    Button num = (Button)sender;
-                    Pheptinh lt2 = new luyThua();
-                    data.n1 = Double.Parse(txt_Display.Text);
-                    txt_Display.Text = lt2.tinhtoan(data.n1, 2).ToString();
-                    txt_show.Text = System.Convert.ToString(data.n1) + "^" + "2";
-                    enter_value = true;
-                }
-                else
-                {
-                    Button num = (Button)sender;
-                    Pheptinh lt2 = new luyThua();
-                    data.n2 = Double.Parse(txt_Display.Text);
-                    txt_Display.Text = lt2.tinhtoan(data.n2, 2).ToString();
-                    txt_show.Text = System.Convert.ToString(data.n1) + data.operation + System.Convert.ToString(data.n2) + "^" + "2" + " = ";
-                    enter_value = true;
-                }
+                    {
+                        Button num = (Button)sender;
+                        Pheptinh lt2 = new luyThua();
+                        data.n1 = Double.Parse(txt_Display.Text);
+                        txt_Display.Text = lt2.tinhtoan(data.n1, 2).ToString();
+                        txt_show.Text = System.Convert.ToString(data.n1) + "^" + "2";
+                        enter_value = true;
+                    }
+                    else
+                    {
+                        Button num = (Button)sender;
+                        Pheptinh lt2 = new luyThua();
+                        data.n2 = Double.Parse(txt_Display.Text);
+                        txt_Display.Text = lt2.tinhtoan(data.n2, 2).ToString();
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + System.Convert.ToString(data.n2) + "^" + "2" + " = ";
+                        enter_value = true;
+                    }
             }
             catch (Exception ex) { ResetCE(); }
         }
@@ -373,7 +373,7 @@ namespace Maytinh.View
 
                 txt_Display.Text = Abs.tinhtoan(data.n1, data.n2).ToString();
 
-                txt_Display.Text = Abs.tinhtoan(data.n1,data.n2).ToString();
+                txt_Display.Text = Abs.tinhtoan(data.n1, data.n2).ToString();
 
                 txt_show.Text = "|" + System.Convert.ToString(data.n1) + "|" + " = ";
                 enter_value = true;
@@ -434,7 +434,7 @@ namespace Maytinh.View
                 }
                 else
                 {
-                    txt_Display.Text = Ln.tinhtoan(data.n1,data.n2).ToString();
+                    txt_Display.Text = Ln.tinhtoan(data.n1, data.n2).ToString();
                     txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                     enter_value = true;
                 }
@@ -446,7 +446,6 @@ namespace Maytinh.View
         {
             try
             {
-
                 Pheptinh Exp = new EXP();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
@@ -474,7 +473,7 @@ namespace Maytinh.View
         private void btn_e_Click(object sender, EventArgs e)
         {
             Pheptinh E = new E();
-            txt_Display.Text=E.tinhtoan(data.n1, data.n2).ToString();
+            txt_Display.Text = E.tinhtoan(data.n1, data.n2).ToString();
         }
 
         private void btn_pi_Click(object sender, EventArgs e)
@@ -503,6 +502,343 @@ namespace Maytinh.View
                 Application.Exit();
             }
             catch (Exception ex) { }
+        }
+
+        private void btn_Trigonometry_Click(object sender, EventArgs e)
+        {
+            if (pnl_Trigonometry.Visible)
+            {
+                pnl_Trigonometry.Visible = false;
+            }
+            else
+            {
+                pnl_Trigonometry.Visible = true;
+            }
+        }
+        string Aunit = "radians"; //đơn vị đo góc
+        int arc = 0;
+        private void btn_Aunit_Click(object sender, EventArgs e)
+        {
+            if (Aunit == "degrees")
+            {
+                Aunit = "radians";
+                btn_Aunit.Text = "Rad";
+            }
+            else if (Aunit == "radians")
+            {
+                Aunit = "degrees";
+                btn_Aunit.Text = "Deg";
+            }
+        }
+        private void btn_2nd_Click(object sender, EventArgs e)
+        {
+            if (arc == 0)
+            {
+                btn_sin.Text = "Asin";
+                btn_cos.Text = "Acos";
+                btn_tan.Text = "Atan";
+                btn_cot.Text = "Acot";
+                arc = -1;
+            }
+            else
+            {
+                btn_sin.Text = "Sin";
+                btn_cos.Text = "Cos";
+                btn_tan.Text = "Tan";
+                btn_cot.Text = "Cot";
+                arc = 0;
+            }
+        }
+        private void btn_sin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button num = (Button)sender;
+                Pheptinh sin = new Sin();
+                Pheptinh asin = new ASin();
+                if (data.operation == string.Empty)
+                {
+                    data.n1 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc==-1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = asin.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = asin.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = "Asin(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = sin.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = sin.tinhtoan(data.n1 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = "Sin(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+                else
+                {
+                    data.n2 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc == -1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = asin.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = asin.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Asin(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = sin.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = sin.tinhtoan(data.n2 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Sin(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+            }
+            catch (Exception ex) { ResetCE(); }
+        }
+
+        private void btn_cos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button num = (Button)sender;
+                Pheptinh cos = new Cos();
+                Pheptinh acos = new ACos();
+                if (data.operation == string.Empty)
+                {
+                    data.n1 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc == -1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = acos.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = acos.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = "Acos(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = cos.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = cos.tinhtoan(data.n1 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = "Cos(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+                else
+                {
+                    data.n2 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc == -1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = acos.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = acos.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Acos(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = cos.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = cos.tinhtoan(data.n2 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Cos(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+            }
+            catch (Exception ex) { ResetCE(); }
+        }
+
+        private void btn_tan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button num = (Button)sender;
+                Pheptinh tan = new Tan();
+                Pheptinh atan = new ATan();
+                if (data.operation == string.Empty)
+                {
+                    data.n1 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc == -1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = atan.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = atan.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = "Atan(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = tan.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = tan.tinhtoan(data.n1 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = "Tan(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+                else
+                {
+                    data.n2 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc == -1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = atan.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = atan.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Atan(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = tan.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = tan.tinhtoan(data.n2 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Tan(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+            }
+            catch (Exception ex) { ResetCE(); }
+        }
+
+        private void btn_cot_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button num = (Button)sender;
+                Pheptinh cot = new Cot();
+                Pheptinh acot = new ACot();
+                if (data.operation == string.Empty)
+                {
+                    data.n1 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc == -1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = acot.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = acot.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = "Acot(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = cot.tinhtoan(data.n1, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = cot.tinhtoan(data.n1 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = "Cot(" + System.Convert.ToString(data.n1) + ") = ";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+                else
+                {
+                    data.n2 = Double.Parse(txt_Display.Text);
+                    double x = 0;
+                    if (arc == -1)
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = acot.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = acot.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Acot(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    else
+                    {
+                        if (Aunit == "radians")
+                        {
+                            x = cot.tinhtoan(data.n2, 0);
+                        }
+                        else if (Aunit == "degrees")
+                        {
+                            x = cot.tinhtoan(data.n2 * Math.PI / 180, 0);
+                        }
+                        txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Cot(" + System.Convert.ToString(data.n2) + ")";
+                    }
+                    txt_Display.Text = x.ToString();
+                    enter_value = true;
+                }
+            }
+            catch (Exception ex) { ResetCE(); }
         }
     }
 }
