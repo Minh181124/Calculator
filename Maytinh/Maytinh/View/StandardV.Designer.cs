@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StandardV));
             btn_1 = new Button();
             btn_2 = new Button();
             btn_3 = new Button();
@@ -405,7 +406,7 @@
             scientificToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             scientificToolStripMenuItem.Image = Properties.Resources.icons8_test_tube_26;
             scientificToolStripMenuItem.Name = "scientificToolStripMenuItem";
-            scientificToolStripMenuItem.Size = new Size(180, 22);
+            scientificToolStripMenuItem.Size = new Size(157, 22);
             scientificToolStripMenuItem.Text = "Scientific";
             scientificToolStripMenuItem.Click += scientificToolStripMenuItem_Click;
             // 
@@ -414,7 +415,7 @@
             progammerToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             progammerToolStripMenuItem.Image = Properties.Resources.icons8_code_26;
             progammerToolStripMenuItem.Name = "progammerToolStripMenuItem";
-            progammerToolStripMenuItem.Size = new Size(180, 22);
+            progammerToolStripMenuItem.Size = new Size(157, 22);
             progammerToolStripMenuItem.Text = "Progammer";
             progammerToolStripMenuItem.Click += progammerToolStripMenuItem_Click;
             // 
@@ -463,6 +464,7 @@
             Controls.Add(btn_2);
             Controls.Add(btn_1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             MaximumSize = new Size(375, 511);
             MinimumSize = new Size(375, 511);

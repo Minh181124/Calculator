@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgammerV));
             btn_1 = new Button();
             btn_2 = new Button();
             btn_3 = new Button();
@@ -733,6 +734,7 @@
             Controls.Add(btn_nhan);
             Controls.Add(btn_1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             MaximumSize = new Size(443, 642);
             MinimumSize = new Size(443, 642);

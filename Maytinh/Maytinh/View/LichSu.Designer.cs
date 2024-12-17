@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LichSu));
             lst_history = new ListBox();
             btn_clear = new Button();
             SuspendLayout();
@@ -61,6 +62,7 @@
             ControlBox = false;
             Controls.Add(btn_clear);
             Controls.Add(lst_history);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimizeBox = false;
             Name = "LichSu";
             Text = "History";

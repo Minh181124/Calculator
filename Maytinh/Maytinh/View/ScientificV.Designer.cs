@@ -713,6 +713,7 @@
             Controls.Add(btn_2);
             Controls.Add(btn_1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             MaximumSize = new Size(438, 595);
             MinimumSize = new Size(438, 595);
