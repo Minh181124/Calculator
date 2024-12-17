@@ -332,9 +332,8 @@
             txt_show.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txt_show.Location = new Point(13, 40);
             txt_show.Margin = new Padding(4, 3, 4, 3);
-            txt_show.Multiline = true;
             txt_show.Name = "txt_show";
-            txt_show.Size = new Size(389, 43);
+            txt_show.Size = new Size(389, 40);
             txt_show.TabIndex = 20;
             txt_show.TextAlign = HorizontalAlignment.Right;
             // 
@@ -346,10 +345,9 @@
             txt_Display.HideSelection = false;
             txt_Display.Location = new Point(20, 89);
             txt_Display.Margin = new Padding(4, 3, 4, 3);
-            txt_Display.Multiline = true;
             txt_Display.Name = "txt_Display";
             txt_Display.ReadOnly = true;
-            txt_Display.Size = new Size(382, 53);
+            txt_Display.Size = new Size(382, 55);
             txt_Display.TabIndex = 21;
             txt_Display.Text = "0";
             txt_Display.TextAlign = HorizontalAlignment.Right;
@@ -471,7 +469,7 @@
             btn_luythuaN.TabIndex = 28;
             btn_luythuaN.Text = "xⁿ";
             btn_luythuaN.UseVisualStyleBackColor = true;
-            btn_luythuaN.Click += btn_luythuaN_Click;
+            btn_luythuaN.Click += btn_operator_Click;
             // 
             // btn_canBacy
             // 
@@ -483,7 +481,7 @@
             btn_canBacy.TabIndex = 29;
             btn_canBacy.Text = "ⁿ√x";
             btn_canBacy.UseVisualStyleBackColor = true;
-            btn_canBacy.Click += btn_canBacy_Click;
+            btn_canBacy.Click += btn_operator_Click;
             // 
             // btn_mod
             // 
@@ -495,7 +493,7 @@
             btn_mod.TabIndex = 30;
             btn_mod.Text = "mod";
             btn_mod.UseVisualStyleBackColor = true;
-            btn_mod.Click += btn_mod_Click;
+            btn_mod.Click += btn_operator_Click;
             // 
             // btn_giaithua
             // 

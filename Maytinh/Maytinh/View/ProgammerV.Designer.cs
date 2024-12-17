@@ -349,10 +349,9 @@
             txt_Display.HideSelection = false;
             txt_Display.Location = new Point(21, 79);
             txt_Display.Margin = new Padding(4, 3, 4, 3);
-            txt_Display.Multiline = true;
             txt_Display.Name = "txt_Display";
             txt_Display.ReadOnly = true;
-            txt_Display.Size = new Size(388, 53);
+            txt_Display.Size = new Size(388, 55);
             txt_Display.TabIndex = 21;
             txt_Display.Text = "0";
             txt_Display.TextAlign = HorizontalAlignment.Right;

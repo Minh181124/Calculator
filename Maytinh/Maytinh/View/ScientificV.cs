@@ -75,6 +75,8 @@ namespace Maytinh.View
                 {
                     Button num = (Button)sender;
                     data.operation = num.Text;
+                    if (num.Text == "xⁿ") data.operation = "^";
+                    if (num.Text== "ⁿ√x") data.operation= "yroot";
                     data.n1 = Double.Parse(txt_Display.Text);
                     txt_Display.Text = "";
                     txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
@@ -85,6 +87,8 @@ namespace Maytinh.View
                     bang();
                     Button num = (Button)sender;
                     data.operation = num.Text;
+                    if (num.Text == "xⁿ") data.operation = "^";
+                    if (num.Text == "ⁿ√x") data.operation = "yroot";
                     if (txt_Display.Text == "")
                     {
                         string lastword = GetLastWord(txt_show.Text);
@@ -309,47 +313,7 @@ namespace Maytinh.View
                 Application.Exit();
             }
             catch (Exception ex) { };
-        }
-        //sự kiện btn_mod (chia lấy dư)
-        private void btn_mod_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Button num = (Button)sender;
-                data.operation = "mod";
-                data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = "";
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
-            }
-            catch (Exception ex) { data.n1 = 0; }
-        }
-        //sự kiện btn căn bậc y
-        private void btn_canBacy_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Button num = (Button)sender;
-                data.operation = "yroot";
-                data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = "";
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
-            }
-            catch (Exception ex) { data.n1 = 0; }
-        }
-        //sự kiện lũy thừa n
-        private void btn_luythuaN_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Button num = (Button)sender;
-                data.operation = "^";
-                data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = "";
-                txt_show.Text = System.Convert.ToString(data.n1) + " " + data.operation;
-            }
-            catch (Exception ex) { data.n1 = 0; }
-        }
-
+        } 
         private void btn_phanNgan_Click(object sender, EventArgs e)
         {
             try
@@ -370,11 +334,7 @@ namespace Maytinh.View
                 Pheptinh Abs = new ABS();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-
-                txt_Display.Text = Abs.tinhtoan(data.n1, data.n2).ToString();
-
-                txt_Display.Text = Abs.tinhtoan(data.n1, data.n2).ToString();
-
+                txt_Display.Text = Abs.tinhtoan(data.n1).ToString();
                 txt_show.Text = "|" + System.Convert.ToString(data.n1) + "|" + " = ";
                 enter_value = true;
             }
@@ -388,7 +348,7 @@ namespace Maytinh.View
                 Pheptinh giaithua = new giaiThua();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = giaithua.tinhtoan(data.n1, data.n2).ToString();
+                txt_Display.Text = giaithua.tinhtoan(data.n1).ToString();
                 txt_show.Text = System.Convert.ToString(data.n1) + "!" + " = ";
                 enter_value = true;
             }
@@ -410,7 +370,7 @@ namespace Maytinh.View
                 }
                 else
                 {
-                    txt_Display.Text = log.tinhtoan(data.n1, data.n2).ToString();
+                    txt_Display.Text = log.tinhtoan(data.n1).ToString();
                     txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                     enter_value = true;
                 }
@@ -434,7 +394,7 @@ namespace Maytinh.View
                 }
                 else
                 {
-                    txt_Display.Text = Ln.tinhtoan(data.n1, data.n2).ToString();
+                    txt_Display.Text = Ln.tinhtoan(data.n1).ToString();
                     txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                     enter_value = true;
                 }
@@ -449,7 +409,7 @@ namespace Maytinh.View
                 Pheptinh Exp = new EXP();
                 Button num = (Button)sender;
                 data.n1 = Double.Parse(txt_Display.Text);
-                txt_Display.Text = Exp.tinhtoan(data.n1, data.n2).ToString();
+                txt_Display.Text = Exp.tinhtoan(data.n1).ToString();
                 txt_show.Text = num.Text + "(" + System.Convert.ToString(data.n1) + ")" + " = ";
                 enter_value = true;
             }
@@ -473,13 +433,13 @@ namespace Maytinh.View
         private void btn_e_Click(object sender, EventArgs e)
         {
             Pheptinh E = new E();
-            txt_Display.Text = E.tinhtoan(data.n1, data.n2).ToString();
+            txt_Display.Text = E.tinhtoan(data.n1).ToString();
         }
 
         private void btn_pi_Click(object sender, EventArgs e)
         {
             Pheptinh Pi = new PI();
-            txt_Display.Text = Pi.tinhtoan(data.n1, data.n2).ToString();
+            txt_Display.Text = Pi.tinhtoan(data.n1).ToString();
         }
         private void GetMessage(double so1, double so2, double ketqua, string dau)
         {
@@ -564,11 +524,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = asin.tinhtoan(data.n1, 0);
+                            x = asin.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = asin.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                            x = asin.tinhtoan(data.n1) * 180 / Math.PI;
                         }
                         txt_show.Text = "Asin(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -576,11 +536,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = sin.tinhtoan(data.n1, 0);
+                            x = sin.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = sin.tinhtoan(data.n1 * Math.PI / 180, 0);
+                            x = sin.tinhtoan(data.n1 * Math.PI / 180);
                         }
                         txt_show.Text = "Sin(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -595,11 +555,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = asin.tinhtoan(data.n2, 0);
+                            x = asin.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = asin.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                            x = asin.tinhtoan(data.n2) * 180 / Math.PI;
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Asin(" + System.Convert.ToString(data.n2) + ")";
                     }
@@ -607,11 +567,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = sin.tinhtoan(data.n2, 0);
+                            x = sin.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = sin.tinhtoan(data.n2 * Math.PI / 180, 0);
+                            x = sin.tinhtoan(data.n2 * Math.PI / 180);
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Sin(" + System.Convert.ToString(data.n2) + ")";
                     }
@@ -637,11 +597,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = acos.tinhtoan(data.n1, 0);
+                            x = acos.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = acos.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                            x = acos.tinhtoan(data.n1) * 180 / Math.PI;
                         }
                         txt_show.Text = "Acos(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -649,11 +609,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = cos.tinhtoan(data.n1, 0);
+                            x = cos.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = cos.tinhtoan(data.n1 * Math.PI / 180, 0);
+                            x = cos.tinhtoan(data.n1 * Math.PI / 180);
                         }
                         txt_show.Text = "Cos(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -668,11 +628,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = acos.tinhtoan(data.n2, 0);
+                            x = acos.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = acos.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                            x = acos.tinhtoan(data.n2) * 180 / Math.PI;
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Acos(" + System.Convert.ToString(data.n2) + ")";
                     }
@@ -680,11 +640,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = cos.tinhtoan(data.n2, 0);
+                            x = cos.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = cos.tinhtoan(data.n2 * Math.PI / 180, 0);
+                            x = cos.tinhtoan(data.n2 * Math.PI / 180);
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Cos(" + System.Convert.ToString(data.n2) + ")";
                     }
@@ -710,11 +670,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = atan.tinhtoan(data.n1, 0);
+                            x = atan.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = atan.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                            x = atan.tinhtoan(data.n1) * 180 / Math.PI;
                         }
                         txt_show.Text = "Atan(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -722,11 +682,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = tan.tinhtoan(data.n1, 0);
+                            x = tan.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = tan.tinhtoan(data.n1 * Math.PI / 180, 0);
+                            x = tan.tinhtoan(data.n1 * Math.PI / 180);
                         }
                         txt_show.Text = "Tan(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -741,11 +701,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = atan.tinhtoan(data.n2, 0);
+                            x = atan.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = atan.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                            x = atan.tinhtoan(data.n2) * 180 / Math.PI;
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Atan(" + System.Convert.ToString(data.n2) + ")";
                     }
@@ -753,11 +713,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = tan.tinhtoan(data.n2, 0);
+                            x = tan.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = tan.tinhtoan(data.n2 * Math.PI / 180, 0);
+                            x = tan.tinhtoan(data.n2 * Math.PI / 180);
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Tan(" + System.Convert.ToString(data.n2) + ")";
                     }
@@ -783,11 +743,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = acot.tinhtoan(data.n1, 0);
+                            x = acot.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = acot.tinhtoan(data.n1, 0) * 180 / Math.PI;
+                            x = acot.tinhtoan(data.n1) * 180 / Math.PI;
                         }
                         txt_show.Text = "Acot(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -795,11 +755,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = cot.tinhtoan(data.n1, 0);
+                            x = cot.tinhtoan(data.n1);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = cot.tinhtoan(data.n1 * Math.PI / 180, 0);
+                            x = cot.tinhtoan(data.n1 * Math.PI / 180);
                         }
                         txt_show.Text = "Cot(" + System.Convert.ToString(data.n1) + ") = ";
                     }
@@ -814,11 +774,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = acot.tinhtoan(data.n2, 0);
+                            x = acot.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = acot.tinhtoan(data.n2, 0) * 180 / Math.PI;
+                            x = acot.tinhtoan(data.n2) * 180 / Math.PI;
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Acot(" + System.Convert.ToString(data.n2) + ")";
                     }
@@ -826,11 +786,11 @@ namespace Maytinh.View
                     {
                         if (Aunit == "radians")
                         {
-                            x = cot.tinhtoan(data.n2, 0);
+                            x = cot.tinhtoan(data.n2);
                         }
                         else if (Aunit == "degrees")
                         {
-                            x = cot.tinhtoan(data.n2 * Math.PI / 180, 0);
+                            x = cot.tinhtoan(data.n2 * Math.PI / 180);
                         }
                         txt_show.Text = System.Convert.ToString(data.n1) + data.operation + "Cot(" + System.Convert.ToString(data.n2) + ")";
                     }

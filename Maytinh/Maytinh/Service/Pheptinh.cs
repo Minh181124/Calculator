@@ -11,13 +11,17 @@ namespace Maytinh.Service
     public abstract class Pheptinh
     {
         public abstract double tinhtoan(double n1, double n2);
-        
+        public abstract double tinhtoan(double n1);
     }
     public class phepCong : Pheptinh 
     {
         public override double tinhtoan(double n1, double n2)
         {
             return n1 + n2;
+        }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
         }
     }
     public class phepTru : Pheptinh
@@ -26,12 +30,20 @@ namespace Maytinh.Service
         {
             return n1 - n2;
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class phepNhan : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
         {
             return n1 * n2;
+        }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
         }
     }
     public class phepChia : Pheptinh
@@ -40,12 +52,20 @@ namespace Maytinh.Service
         {
             return n1 / n2;
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class Chialaydu : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
         {
             return n1 % n2;
+        }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
         }
     }
     public class canBac : Pheptinh
@@ -54,6 +74,10 @@ namespace Maytinh.Service
         {
             return Math.Pow((double)n1, 1 / n2);
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class luyThua : Pheptinh
     {
@@ -61,10 +85,18 @@ namespace Maytinh.Service
         {
             return Math.Pow(n1, n2);
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class giaiThua : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             double ketqua = 1;
             int i = 1;
@@ -80,12 +112,20 @@ namespace Maytinh.Service
     {
         public override double tinhtoan(double n1, double n2)
         {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
+        {
             return Math.E;
         }
     }
     public class PI : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             return Math.PI;
         }
@@ -94,12 +134,20 @@ namespace Maytinh.Service
     {
         public override double tinhtoan(double n1, double n2)
         {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
+        {
             return Math.Log(n1);
         }
     }
     public class Log : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             return Math.Log10(n1);
         }
@@ -108,12 +156,20 @@ namespace Maytinh.Service
     {
         public override double tinhtoan(double n1, double n2)
         {
-           return Math.Exp(n1);
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
+        {
+            return Math.Exp(n1);
         }
     }
     public class ABS : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             return Math.Abs(n1);
         }
@@ -122,12 +178,20 @@ namespace Maytinh.Service
     {
         public override double tinhtoan(double n1, double n2)
         {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
+        {
             return Math.Sin(n1);
         }
     }
     public class ASin : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             return Math.Asin(n1);
         }
@@ -136,12 +200,20 @@ namespace Maytinh.Service
     {
         public override double tinhtoan(double n1, double n2)
         {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
+        {
             return Math.Cos(n1);
         }
     }
     public class ACos : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             return Math.Acos(n1);
         }
@@ -150,12 +222,20 @@ namespace Maytinh.Service
     {
         public override double tinhtoan(double n1, double n2)
         {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
+        {
             return Math.Tan(n1);
         }
     }
     public class ATan : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             return Math.Atan(n1);
         }
@@ -164,12 +244,20 @@ namespace Maytinh.Service
     {
         public override double tinhtoan(double n1, double n2)
         {
-            return 1/Math.Tan(n1);
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
+        {
+            return 1 / Math.Tan(n1);
         }
     }
     public class ACot : Pheptinh
     {
         public override double tinhtoan(double n1, double n2)
+        {
+            return tinhtoan(n1);
+        }
+        public override double tinhtoan(double n1)
         {
             return Math.PI / 2 - Math.Atan(n1);
         }
@@ -182,6 +270,10 @@ namespace Maytinh.Service
             int s2 = (int)n2;
             return s1 & s2;
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class OR : Pheptinh
     {
@@ -190,6 +282,10 @@ namespace Maytinh.Service
             int s1 = (int)n1;
             int s2 = (int)n2;
             return s1 | s2;
+        }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
         }
     }
     public class XOR : Pheptinh
@@ -200,6 +296,10 @@ namespace Maytinh.Service
             int s2 = (int)n2;
             return s1 ^ s2;
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class NAND : Pheptinh
     {
@@ -208,6 +308,10 @@ namespace Maytinh.Service
             int s1 = (int)n1;
             int s2 = (int)n2;
             return ~(s1 & s2);
+        }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
         }
     }
     public class NOR : Pheptinh
@@ -218,6 +322,10 @@ namespace Maytinh.Service
             int s2 = (int)n2;
             return ~(s1 | s2);
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class RSH : Pheptinh
     {
@@ -227,6 +335,10 @@ namespace Maytinh.Service
             int s2 = (int)n2;
             return s1>>s2;
         }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
+        }
     }
     public class LSH : Pheptinh
     {
@@ -235,6 +347,10 @@ namespace Maytinh.Service
             int s1 = (int)n1;
             int s2 = (int)n2;
             return s1<<s2;
+        }
+        public override double tinhtoan(double n1)
+        {
+            return 0;
         }
     }
 }
